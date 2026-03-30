@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" role="img" aria-label="Retro platform world map with pipes, hills, blocks, and a castle">
+  <rect width="960" height="540" fill="#6bc6ff"/>
+  <rect y="410" width="960" height="130" fill="#d38b4d"/>
+  <rect y="440" width="960" height="100" fill="#b56e36"/>
+
+  <g fill="#ffffff">
+    <ellipse cx="140" cy="110" rx="48" ry="28"/>
+    <ellipse cx="180" cy="105" rx="36" ry="24"/>
+    <ellipse cx="215" cy="115" rx="30" ry="20"/>
+    <ellipse cx="650" cy="90" rx="42" ry="26"/>
+    <ellipse cx="690" cy="85" rx="34" ry="22"/>
+    <ellipse cx="725" cy="94" rx="28" ry="18"/>
+  </g>
+
+  <g>
+    <ellipse cx="170" cy="405" rx="88" ry="74" fill="#7fc35a"/>
+    <ellipse cx="170" cy="418" rx="88" ry="54" fill="#5e9f38"/>
+    <ellipse cx="315" cy="405" rx="72" ry="62" fill="#9adf71"/>
+    <ellipse cx="315" cy="417" rx="72" ry="44" fill="#6bb444"/>
+    <ellipse cx="760" cy="400" rx="100" ry="82" fill="#7fc35a"/>
+    <ellipse cx="760" cy="416" rx="100" ry="56" fill="#5e9f38"/>
+  </g>
+
+  <g fill="#21a843">
+    <rect x="104" y="292" width="88" height="132"/>
+    <rect x="96" y="276" width="104" height="26"/>
+    <rect x="540" y="322" width="102" height="102"/>
+    <rect x="528" y="306" width="126" height="24"/>
+  </g>
+
+  <g fill="#c96f38" stroke="#8b451f" stroke-width="4">
+    <rect x="232" y="218" width="74" height="54"/>
+    <rect x="310" y="218" width="74" height="54"/>
+    <rect x="388" y="218" width="74" height="54"/>
+    <rect x="466" y="218" width="74" height="54"/>
+  </g>
+
+  <g fill="#f6d14c" stroke="#b08000" stroke-width="4">
+    <rect x="312" y="152" width="78" height="64"/>
+    <rect x="548" y="238" width="78" height="64"/>
+  </g>
+
+  <g fill="#8c5c2b" stroke="#5a3416" stroke-width="4">
+    <rect x="754" y="220" width="128" height="160"/>
+    <rect x="778" y="178" width="26" height="42"/>
+    <rect x="830" y="178" width="26" height="42"/>
+    <rect x="742" y="196" width="152" height="32"/>
+  </g>
+
+  <path d="M0 408 C84 370, 172 430, 264 398 S444 404, 530 392 S692 430, 806 396 S910 388, 960 402" fill="none" stroke="#f2e1a1" stroke-width="8" stroke-dasharray="14 10"/>
+
+  <circle cx="351" cy="183" r="8" fill="#ffffff"/>
+  <circle cx="587" cy="270" r="8" fill="#ffffff"/>
+
+  <text x="42" y="56" fill="#ffffff" font-family="monospace" font-size="34">BRICK KINGDOM WORLD MAP</text>
+  <text x="46" y="100" fill="#103e6b" font-family="monospace" font-size="18">Pipes, blocks, hills, and one very grumpy castle boss.</text>
+</svg>

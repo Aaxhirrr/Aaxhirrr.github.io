@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 260" role="img" aria-label="Futuristic starship viewed from behind">
+  <defs>
+    <linearGradient id="shipBody" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#d8f2ff"/>
+      <stop offset="100%" stop-color="#5aa4ff"/>
+    </linearGradient>
+    <linearGradient id="engineGlow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9affff"/>
+      <stop offset="100%" stop-color="#2c54ff"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="260" height="260" fill="none"/>
+  <path d="M130 24 L162 78 L194 112 L182 150 L164 142 L154 188 L106 188 L96 142 L78 150 L66 112 L98 78 Z" fill="url(#shipBody)"/>
+  <path d="M98 78 L68 92 L46 130 L72 120 Z" fill="#8cc8ff"/>
+  <path d="M162 78 L192 92 L214 130 L188 120 Z" fill="#8cc8ff"/>
+  <rect x="116" y="92" width="28" height="36" rx="8" fill="#08254f"/>
+  <rect x="98" y="190" width="22" height="30" rx="10" fill="url(#engineGlow)"/>
+  <rect x="140" y="190" width="22" height="30" rx="10" fill="url(#engineGlow)"/>
+  <path d="M102 220 C110 246, 110 246, 118 220 Z" fill="#86f0ff" opacity="0.85"/>
+  <path d="M144 220 C152 246, 152 246, 160 220 Z" fill="#86f0ff" opacity="0.85"/>
+  <circle cx="130" cy="56" r="8" fill="#ffffff" opacity="0.9"/>
+</svg>

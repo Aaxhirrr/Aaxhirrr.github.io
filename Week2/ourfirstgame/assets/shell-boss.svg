@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 220" role="img" aria-label="Original retro shell boss sprite">
+  <rect width="240" height="220" fill="none"/>
+  <ellipse cx="120" cy="118" rx="74" ry="58" fill="#5aa640"/>
+  <ellipse cx="120" cy="118" rx="54" ry="40" fill="#e5ddb8"/>
+  <rect x="70" y="72" width="100" height="34" rx="10" fill="#7cc24b"/>
+  <polygon points="74,72 96,40 118,72" fill="#fff2d8"/>
+  <polygon points="122,72 144,40 166,72" fill="#fff2d8"/>
+  <circle cx="88" cy="116" r="18" fill="#f0d0aa"/>
+  <circle cx="152" cy="116" r="18" fill="#f0d0aa"/>
+  <circle cx="88" cy="112" r="4" fill="#111111"/>
+  <circle cx="152" cy="112" r="4" fill="#111111"/>
+  <rect x="100" y="128" width="40" height="10" fill="#8f3b22"/>
+  <rect x="58" y="154" width="24" height="30" fill="#f0d0aa"/>
+  <rect x="158" y="154" width="24" height="30" fill="#f0d0aa"/>
+  <rect x="86" y="170" width="22" height="26" fill="#f0d0aa"/>
+  <rect x="132" y="170" width="22" height="26" fill="#f0d0aa"/>
+</svg>

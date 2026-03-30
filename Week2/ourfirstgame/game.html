@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Brick Kingdom Boss Battle</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: "Courier New", monospace;
+            background: linear-gradient(#6bc6ff 0 72%, #6ab04c 72% 100%);
+            color: #1f130a;
+        }
+
+        .game-shell {
+            width: min(980px, 95%);
+            margin: 18px auto;
+        }
+
+        .banner {
+            padding: 18px 14px;
+            text-align: center;
+            border: 6px solid #1f130a;
+            background:
+                linear-gradient(180deg, #d97b37 0 50%, #b85f27 50% 100%);
+            color: #fff8eb;
+            box-shadow: 8px 8px 0 #1f130a;
+        }
+
+        .arena,
+        .command-box {
+            margin-top: 18px;
+            border: 6px solid #1f130a;
+            background: #f9edd2;
+            box-shadow: 8px 8px 0 #1f130a;
+        }
+
+        .arena {
+            padding: 18px;
+        }
+
+        .fighter {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 12px 0;
+        }
+
+        .fighter.enemy {
+            flex-direction: row-reverse;
+        }
+
+        .fighter img {
+            width: 170px;
+            flex-shrink: 0;
+        }
+
+        .status-card {
+            flex: 1;
+            border: 4px solid #1f130a;
+            background: #fff9ec;
+            padding: 14px;
+        }
+
+        .brick-bar {
+            height: 30px;
+            border-top: 6px solid #1f130a;
+            border-bottom: 6px solid #1f130a;
+            background:
+                linear-gradient(180deg, #d97b37 0 50%, #b85f27 50% 100%);
+        }
+
+        .command-box {
+            padding: 18px;
+        }
+
+        .command-box ol {
+            margin: 12px 0 0;
+            padding-left: 22px;
+        }
+
+        .command-box li {
+            margin: 10px 0;
+        }
+
+        button,
+        select,
+        a {
+            font: inherit;
+        }
+
+        button {
+            padding: 8px 14px;
+            border: 3px solid #1f130a;
+            background: #f4d04e;
+            color: #1f130a;
+            box-shadow: 3px 3px 0 #1f130a;
+        }
+
+        select {
+            padding: 6px;
+            border: 3px solid #1f130a;
+            background: #ffffff;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 14px;
+            color: #1f130a;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <section class="game-shell">
+        <header class="banner">
+            <h1 id="encounter">THE LAVA SHELL BOSS APPEARS</h1>
+        </header>
+
+        <section class="arena">
+            <section class="fighter enemy">
+                <img src="./assets/shell-boss.svg" alt="Retro shell boss enemy">
+                <div class="status-card">
+                    <h2>Castle Boss</h2>
+                    <h3>HP: 10/10</h3>
+                    <p>The bridge is blocked, the lava is bubbling, and the boss is guarding the final gate.</p>
+                </div>
+            </section>
+
+            <div class="brick-bar"></div>
+
+            <section class="fighter">
+                <img src="./assets/plumber-hero.svg" alt="Retro plumber hero">
+                <div class="status-card">
+                    <h2>Plumber Hero</h2>
+                    <h3>HP: 10/10</h3>
+                    <p>Hat on, gloves ready, and absolutely not leaving without the win.</p>
+                </div>
+            </section>
+        </section>
+
+        <section class="command-box">
+            <h2>Choose Your Move</h2>
+            <ol>
+                <li><button>JUMP</button></li>
+                <li>
+                    <label id="item" for="item-select">POWER-UP</label>
+                    <select id="item-select">
+                        <option value="fire-flower">FIRE FLOWER</option>
+                        <option value="super-mushroom">SUPER MUSHROOM</option>
+                    </select>
+                </li>
+                <li><button>STOMP</button></li>
+                <li><button>RUN BACK TO THE PIPE</button></li>
+            </ol>
+            <a class="back-link" href="./index.html">Return to Start Screen</a>
+        </section>
+    </section>
+</body>
+</html>
