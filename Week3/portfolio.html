@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Aashir Portfolio</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background-color: #e4dccf;
+      color: #2b221d;
+      font-family: Georgia, "Times New Roman", serif;
+    }
+
+    .page {
+      width: min(980px, 92%);
+      margin: 28px auto 48px;
+    }
+
+    .hero {
+      background-color: #f8f1e5;
+      border: 2px solid #59463b;
+      padding: 28px;
+      box-shadow: 8px 8px 0 rgba(89, 70, 59, 0.18);
+    }
+
+    .eyebrow {
+      margin: 0 0 10px;
+      font-family: Verdana, sans-serif;
+      font-size: 0.8rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #8c4c2a;
+    }
+
+    h1,
+    h2 {
+      margin: 0;
+      font-weight: 700;
+    }
+
+    h1 {
+      font-size: clamp(2.2rem, 5vw, 4rem);
+      line-height: 0.95;
+      max-width: 8ch;
+      color: #1f3f36;
+    }
+
+    .intro {
+      max-width: 54ch;
+      margin: 18px 0 0;
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 18px;
+      margin-top: 18px;
+    }
+
+    .card {
+      background-color: #fffaf3;
+      border: 2px solid #59463b;
+      padding: 22px;
+    }
+
+    .card h2 {
+      margin-bottom: 14px;
+      color: #8c4c2a;
+      font-size: 1.25rem;
+    }
+
+    .card p,
+    .card li {
+      font-size: 1rem;
+      line-height: 1.65;
+    }
+
+    .project-list,
+    .facts-list {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    .project-list li,
+    .facts-list li {
+      margin-bottom: 10px;
+    }
+
+    a {
+      color: #1f5e55;
+      text-underline-offset: 3px;
+    }
+
+    a:hover {
+      color: #8c4c2a;
+    }
+
+    .small-note {
+      margin-top: 18px;
+      padding: 16px 18px;
+      border-left: 5px solid #8c4c2a;
+      background-color: #efe2cf;
+      font-family: Verdana, sans-serif;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 760px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        max-width: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <p class="eyebrow">Student Portfolio</p>
+      <h1>Aashir Javed</h1>
+      <p class="intro">
+        I am a student learning web design and front-end basics. Right now I am building small projects
+        for class, experimenting with layouts, and getting more comfortable with HTML and CSS one week at a time.
+      </p>
+    </section>
+
+    <section class="grid">
+      <section class="card">
+        <h2>Projects</h2>
+        <ul class="project-list">
+          <li>
+            <strong>Week 2 Skeleton Page</strong><br>
+            A playful page with a simple interactive skeleton idea.<br>
+            <a href="../Week2/">View Week 2 Page</a>
+          </li>
+          <li>
+            <strong>Week 2 Game</strong><br>
+            A retro plumber-style mini game page that I remixed from the class starter.<br>
+            <a href="../Week2/ourfirstgame/">View Game Project</a>
+          </li>
+          <li>
+            <strong>Week 3 CSS Card</strong><br>
+            A styled card page focused on layout, typography, and buttons.<br>
+            <a href="./index.html">View Week 3 Card</a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>About Me</h2>
+        <ul class="facts-list">
+          <li>I enjoy making pages that feel fun instead of plain.</li>
+          <li>I like game-inspired design and interactive ideas.</li>
+          <li>I am still learning, but I like seeing each project look more finished than the last one.</li>
+        </ul>
+      </section>
+    </section>
+
+    <section class="small-note">
+      You can also find my repository here:
+      <a href="https://github.com/Aaxhirrr/Aaxhirrr.github.io" target="_blank" rel="noreferrer">github.com/Aaxhirrr/Aaxhirrr.github.io</a>
+    </section>
+  </main>
+</body>
+</html>
