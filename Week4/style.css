@@ -86,7 +86,7 @@ body {
     background-color: rgba(255, 255, 255, 0.1); 
     border: 1px solid rgba(255, 255, 255, 0.1);
     max-width: 1400px;
-    margin: 4rem auto;
+    margin: 2rem auto;
 }
 
 /* =========================================
@@ -95,7 +95,7 @@ body {
 /* Target: Div within grid uses flexbox */
 .card {
     background-color: #000000;
-    padding: 4rem 3rem;
+    padding: 2.5rem 2rem;
     
     /* Target: Flex divs are to specification - display flex */
     display: flex;
@@ -112,10 +112,10 @@ body {
 /* Very minimal, structured graphic layout */
 .img-container {
     width: 100%;
-    max-width: 500px;
-    height: 280px;
+    max-width: 420px;
+    height: 220px;
     overflow: hidden;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
@@ -140,7 +140,7 @@ body {
 }
 
 .card h2 {
-    font-size: 2.2rem;
+    font-size: 1.7rem;
     font-weight: 800;
     margin: 0 0 1rem 0;
     letter-spacing: -1px;
@@ -152,7 +152,7 @@ body {
 .card p {
     font-size: 1.1rem;
     color: rgba(255, 255, 255, 0.4);
-    margin: 0 0 3rem 0;
+    margin: 0 0 2rem 0;
     /* Target: nowrap */
     white-space: nowrap;
     font-weight: 400;
@@ -169,8 +169,8 @@ body {
     background: #ffffff;
     color: #000000;
     border: 1px solid #ffffff;
-    padding: 1rem 3rem;
-    font-size: 0.85rem;
+    padding: 0.8rem 2rem;
+    font-size: 0.8rem;
     font-weight: 700;
     cursor: pointer;
     text-transform: uppercase;
