@@ -34,8 +34,7 @@ body {
     
     /* Target: 4 buttons distributed using flexbox */
     display: flex;
-    justify-content: center;
-    gap: 3rem;
+    justify-content: space-evenly;
     align-items: center;
 }
 
