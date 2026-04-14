@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap');
+
+/* Target: Set root font size to 16px for desktop */
+html {
+    font-size: 16px;
+    font-family: 'Inter', system-ui, sans-serif;
+    background-color: #000000; /* Pitch Black */
+    color: #ffffff;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000000; /* Pitch Black */
+}
+
+/* =========================================
+   1. Sticky Nav Element
+   ========================================= */
+/* Target: element with position: sticky */
+.sticky-nav {
+    position: sticky;
+    top: 0;
+    background: #000000;
+    z-index: 1000;
+    padding: 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Sharp clean line */
+    
+    /* Target: 4 buttons distributed using flexbox */
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    align-items: center;
+}
+
+.nav-btn {
+    background: transparent;
+    color: rgba(255, 255, 255, 0.5);
+    border: none;
+    padding: 0.5rem;
+    /* Target: font sizes in REM */
+    font-size: 0.9rem;
+    font-weight: 700;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-btn::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 1px;
+    background-color: #ffffff;
+    transition: width 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.nav-btn:hover {
+    color: #ffffff;
+}
+
+.nav-btn:hover::after {
+    width: 100%;
+}
+
+/* =========================================
+   2. Grid Layout
+   ========================================= */
+/* Target: Grid layout for desktop minimum 2 columns x 2 rows */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 1px; /* Emulates a 1px solid grid line layout */
+    background-color: rgba(255, 255, 255, 0.1); 
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    max-width: 1400px;
+    margin: 4rem auto;
+}
+
+/* =========================================
+   3. Flexbox Cards
+   ========================================= */
+/* Target: Div within grid uses flexbox */
+.card {
+    background-color: #000000;
+    padding: 4rem 3rem;
+    
+    /* Target: Flex divs are to specification - display flex */
+    display: flex;
+    flex-direction: column;
+    /* Target: align content to the center */
+    align-items: center;
+    justify-content: center;
+    /* Target: ensure that the content does not wrap */
+    flex-wrap: nowrap;
+    
+    text-align: center;
+}
+
+/* Very minimal, structured graphic layout */
+.img-container {
+    width: 100%;
+    max-width: 500px;
+    height: 280px;
+    overflow: hidden;
+    margin-bottom: 3rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1), filter 0.8s ease;
+    filter: grayscale(100%); /* Monochromatic aesthetic base */
+}
+
+.card:hover .card-img {
+    transform: scale(1.05);
+    filter: grayscale(0%); /* Explodes with color on hover */
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.card h2 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin: 0 0 1rem 0;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+    /* Target: nowrap */
+    white-space: nowrap; 
+}
+
+.card p {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.4);
+    margin: 0 0 3rem 0;
+    /* Target: nowrap */
+    white-space: nowrap;
+    font-weight: 400;
+}
+
+.card-actions {
+    display: flex;
+    gap: 1.5rem;
+    width: 100%;
+    justify-content: center;
+}
+
+.action-btn {
+    background: #ffffff;
+    color: #000000;
+    border: 1px solid #ffffff;
+    padding: 1rem 3rem;
+    font-size: 0.85rem;
+    font-weight: 700;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+}
+
+.action-btn:hover {
+    background: transparent;
+    color: #ffffff;
+}
+
+.action-btn.outline {
+    background: transparent;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.action-btn.outline:hover {
+    border-color: #ffffff;
+    background: #ffffff;
+    color: #000000;
+}
+
+/* =========================================
+   4. Mobile Responsiveness
+   ========================================= */
+/* Target: Site has @media selector for mobile view */
+/* Target: Mobile screens are typically no bigger than 720px */
+@media (max-width: 720px) {
+    
+    /* Target: Set the root to be 12px for mobile */
+    html {
+        font-size: 12px;
+    }
+    
+    .sticky-nav {
+        flex-wrap: wrap; 
+        gap: 1.5rem;
+        padding: 1.5rem;
+    }
+
+    .nav-btn {
+        width: 40%;
+        font-size: 1rem;
+    }
+
+    .grid-container {
+        /* Target: Mobile 1 column */
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        margin: 0;
+        border: none;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        background-color: transparent; /* Remove grid gap lines to look better on mobile */
+    }
+    
+    .card {
+        padding: 5rem 2rem;
+        
+        /* Target: For Mobile: each card takes up the full screen */
+        min-height: 100vh;
+        width: 100%;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .img-container {
+        height: 350px;
+    }
+
+    .card h2, .card p {
+        max-width: 90vw;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+}
