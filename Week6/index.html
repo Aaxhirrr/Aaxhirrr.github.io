@@ -1,10 +1,111 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Week 6</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 6: Story-Driven Games</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Week 6</h1>
-  <p>Assignments and work for Week 6.</p>
+
+    <!-- Sticky nav with 4 buttons -->
+    <header class="sticky-nav">
+        <button class="nav-btn">The Last of Us II</button>
+        <button class="nav-btn">RDR 2</button>
+        <button class="nav-btn">Life is Strange</button>
+        <button class="nav-btn">The Walking Dead</button>
+    </header>
+
+    <div class="hover-hint">* Hover over images to reveal color</div>
+
+    <!-- Grid layout -->
+    <main class="grid-container">
+        
+        <!-- Card 1 -->
+        <div class="card" data-game="the last of us ii">
+            <div class="img-container">
+                <img src="images/tlou2.png" alt="The Last of Us Part II" class="card-img">
+            </div>
+            <div class="card-content">
+                <h2>The Last of Us II</h2>
+                <p>A relentless journey of revenge and survival.</p>
+                <div class="card-actions">
+                    <a href="https://www.youtube.com/watch?v=vhII1qlcZ4E" target="_blank" class="action-btn trailer-btn">▶ Trailer</a>
+                    <a href="https://www.playstation.com/en-us/games/the-last-of-us-part-ii/" target="_blank" class="action-btn outline details-btn">Details</a>
+                    <button class="action-btn outline fav-btn" data-favorited="false">🤍</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card" data-game="red dead redemption 2">
+            <div class="img-container">
+                <img src="images/rdr2.png" alt="Red Dead Redemption 2" class="card-img">
+            </div>
+            <div class="card-content">
+                <h2>Red Dead Redemption 2</h2>
+                <p>An epic tale of outlaws in the dying Wild West.</p>
+                <div class="card-actions">
+                    <a href="https://www.youtube.com/watch?v=eaW0tYpxyp0" target="_blank" class="action-btn trailer-btn">▶ Trailer</a>
+                    <a href="https://www.rockstargames.com/reddeadredemption2/" target="_blank" class="action-btn outline details-btn">Details</a>
+                    <button class="action-btn outline fav-btn" data-favorited="false">🤍</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card" data-game="life is strange">
+            <div class="img-container">
+                <img src="images/lis.png" alt="Life is Strange" class="card-img">
+            </div>
+            <div class="card-content">
+                <h2>Life is Strange</h2>
+                <p>Choice-based narrative with time-rewinding powers.</p>
+                <div class="card-actions">
+                    <a href="https://www.youtube.com/watch?v=mpRhaXfvG_0" target="_blank" class="action-btn trailer-btn">▶ Trailer</a>
+                    <a href="https://lifeisstrange.square-enix-games.com/" target="_blank" class="action-btn outline details-btn">Details</a>
+                    <button class="action-btn outline fav-btn" data-favorited="false">🤍</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="card" data-game="the walking dead">
+            <div class="img-container">
+                <img src="images/twd.png" alt="The Walking Dead" class="card-img">
+            </div>
+            <div class="card-content">
+                <h2>The Walking Dead</h2>
+                <p>Emotional journey through a zombie apocalypse.</p>
+                <div class="card-actions">
+                    <a href="https://www.youtube.com/watch?v=PNhtBDXGNbw" target="_blank" class="action-btn trailer-btn">▶ Trailer</a>
+                    <a href="https://www.skybound.com/telltales-the-walking-dead" target="_blank" class="action-btn outline details-btn">Details</a>
+                    <button class="action-btn outline fav-btn" data-favorited="false">🤍</button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    </main>
+
+    <!-- INTERACTION GUIDE (Architectural Footer) -->
+    <footer class="interaction-guide">
+        <div class="guide-inner">
+            <h3>System Interactions</h3>
+            <div class="guide-grid">
+                <div class="guide-item"><span class="key">NAV CLICK</span> <span>Highlight & reveal</span></div>
+                <div class="guide-item"><span class="key">IMAGE HOVER</span> <span>Color & zoom reveal</span></div>
+                <div class="guide-item"><span class="key">▶ TRAILER</span> <span>Launch cinematic</span></div>
+                <div class="guide-item"><span class="key">DETAILS</span> <span>Visit headquarters</span></div>
+                <div class="guide-item"><span class="key">🤍 FAVORITE</span> <span>Toggle collection</span></div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast notification -->
+    <div id="toast" class="toast hidden"></div>
+
+    <script src="script.js"></script>
 </body>
 </html>

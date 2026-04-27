@@ -1,0 +1,386 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap');
+
+/* =========================================
+   Root & Resets
+   ========================================= */
+html {
+    font-size: 16px;
+    font-family: 'Inter', system-ui, sans-serif;
+    background-color: #000000;
+    color: #ffffff;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+}
+
+/* =========================================
+   Sticky Nav
+   ========================================= */
+.sticky-nav {
+    position: sticky;
+    top: 0;
+    background: #000000;
+    z-index: 1000;
+    padding: 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.nav-btn {
+    background: transparent;
+    color: rgba(255, 255, 255, 0.5);
+    border: none;
+    padding: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 700;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-btn::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 1px;
+    background-color: #ffffff;
+    transition: width 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.nav-btn:hover {
+    color: #ffffff;
+}
+
+.nav-btn:hover::after {
+    width: 100%;
+}
+
+.nav-btn.active {
+    color: #ffffff;
+}
+
+.nav-btn.active::after {
+    width: 100%;
+}
+
+/* =========================================
+   Hover Hint — fixed z-index
+   ========================================= */
+.hover-hint {
+    text-align: center;
+    padding-top: 2rem;
+    padding-bottom: 0.5rem;
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+    position: relative;
+    z-index: 1;
+}
+
+/* =========================================
+   Grid Layout
+   ========================================= */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 1px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    max-width: 1400px;
+    margin: 1rem auto 2rem;
+}
+
+/* =========================================
+   Flexbox Cards
+   ========================================= */
+.card {
+    background-color: #000000;
+    padding: 2.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    text-align: center;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.card.highlighted {
+    background-color: #0a0a0a;
+    box-shadow: inset 0 0 60px rgba(255, 255, 255, 0.03);
+}
+
+.card.highlighted .card-img {
+    filter: grayscale(0%);
+    transform: scale(1.05);
+}
+
+.card.dimmed {
+    opacity: 0.2;
+}
+
+.img-container {
+    width: 100%;
+    max-width: 420px;
+    height: 220px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1), filter 0.8s ease;
+    filter: grayscale(100%);
+}
+
+.card:hover .card-img {
+    transform: scale(1.05);
+    filter: grayscale(0%);
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.card h2 {
+    font-size: 1.7rem;
+    font-weight: 800;
+    margin: 0 0 1rem 0;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.card p {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.4);
+    margin: 0 0 2rem 0;
+    white-space: nowrap;
+    font-weight: 400;
+}
+
+.card-actions {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.action-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    color: #000000;
+    border: 1px solid #ffffff;
+    padding: 0.7rem 1.5rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+}
+
+.action-btn:hover {
+    background: transparent;
+    color: #ffffff;
+}
+
+.action-btn.outline {
+    background: transparent;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.action-btn.outline:hover {
+    border-color: #ffffff;
+    background: #ffffff;
+    color: #000000;
+}
+
+/* Favorite button states */
+.fav-btn {
+    padding: 0.7rem 1rem;
+    font-size: 1rem;
+    min-width: unset;
+}
+
+.fav-btn.favorited {
+    background: #e74c3c;
+    border-color: #e74c3c;
+    color: #ffffff;
+}
+
+.fav-btn.favorited:hover {
+    background: #c0392b;
+    border-color: #c0392b;
+    color: #ffffff;
+}
+
+/* =========================================
+   Toast Notification
+   ========================================= */
+.toast {
+    position: fixed;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%) translateY(20px);
+    background: #ffffff;
+    color: #000000;
+    padding: 0.8rem 2rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 9999;
+    pointer-events: none;
+}
+
+.toast.visible {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+.toast.hidden {
+    opacity: 0;
+    transform: translateX(-50%) translateY(20px);
+}
+
+/* =========================================
+   Interaction Guide (Architectural Footer)
+   ========================================= */
+.interaction-guide {
+    background-color: #000000;
+    padding: 4rem 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 2rem;
+}
+
+.guide-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.guide-inner h3 {
+    font-size: 0.9rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 2.5rem;
+}
+
+.guide-grid {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    flex-wrap: wrap;
+}
+
+.guide-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.guide-item .key {
+    font-weight: 800;
+    color: #ffffff;
+    font-size: 0.7rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.guide-item span:last-child {
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+/* =========================================
+   4. Mobile Responsiveness
+   ========================================= */
+@media (max-width: 720px) {
+    html {
+        font-size: 12px;
+    }
+
+    .sticky-nav {
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        padding: 1.5rem;
+    }
+
+    .nav-btn {
+        width: 40%;
+        font-size: 1rem;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        margin: 0;
+        border: none;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        background-color: transparent;
+    }
+
+    .card {
+        padding: 5rem 2rem;
+        min-height: 100vh;
+        width: 100%;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .img-container {
+        height: 350px;
+    }
+
+    .card h2, .card p {
+        max-width: 90vw;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .card-actions {
+        flex-wrap: wrap;
+    }
+
+    .guide-grid {
+        gap: 2rem;
+    }
+}
